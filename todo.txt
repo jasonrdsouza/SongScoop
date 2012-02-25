@@ -1,0 +1,22 @@
+Todo:
+- update readme with proper information
+    - include the fact that it is for educational purposes only
+- push to github
+- make this into an installable package of some sort?
+    - shell script
+    - debian package?
+    - windows exe?
+- implement downloading the mp3 files to a "download" directory
+- improve the parser
+    - make it return only the links?
+    - understand its operation/ regexes better
+- make the downloader check if the first try was sucessful or not
+    - try the second link if the first fails, and so on
+- progress report of download?
+    - cli based progress report
+- stored database of previously downloaded songs
+    - so that you dont download duplicates
+    - can initially populate it with songs in current library
+- implement a proper test suite
+    - using unittest (the one built into python)
+- GUI implementation on top of the cli version
