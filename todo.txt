@@ -10,6 +10,7 @@ Todo:
 - improve the parser
     - make it return only the links?
     - understand its operation/ regexes better
+    - use beautifulsoup
 - make the downloader check if the first try was sucessful or not
     - try the second link if the first fails, and so on
 - progress report of download?

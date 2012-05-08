@@ -51,18 +51,12 @@ def download_song(song, downloader):
        downloader, and taking all the steps necessary to download
        the desired song. Downloaders can easily be written and 
        integrated into this framework. They must simply follow the
-       interface of .getSongPage, and .songs. Consult existing
+       interface of .getSongLink(song). Consult existing
        downloaders for further clarification.'''
     if downloader == None:
         print 'Bad downloader'
         return
-    html_file = downloader.getSongPage(song)
-    songs = downloader.songs(html_file)
-    #for songAndLink in songs:
-        # for now, only use the first URL... should have a failure
-        # detection method, and use other urls in the list if need be
-    songAndLink = songs[0] 
-    song_url = 'http://{}'.format(songAndLink[1])
+    song_url = downloader.getSongLink(song)
     web_download(song_url, song+'.mp3')
     print 'Finished downloading: {}'.format(song)
 
