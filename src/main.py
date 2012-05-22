@@ -116,7 +116,7 @@ def main():
             song = arg
         elif option == '--site':
             site = str_to_site(arg)
-        elif option == '--songlist':
+        elif option == '--songfile':
             songfile = arg
         elif option == '--help':
             usage()
@@ -129,6 +129,7 @@ def main():
     if songfile != None:
         with open(songfile, 'r') as f:
             for line in f:
+                line = line.strip('\n')
                 download_song(line, downloader)
         assert f.closed
 
